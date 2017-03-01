@@ -1,0 +1,38 @@
+% !Mode:: "TeX:UTF-8"
+\def\usewhat{dvipdfmx}                              
+
+\documentclass[a4paper, openany,twoside]{book}
+\input{setup/package}
+\graphicspath{{figures/}}
+\begin{document}
+\begin{CJK*}{UTF8}{song}
+\input{setup/format}
+\frontmatter
+\input{preface/cover}
+%%%%%%%%%%   目录   %%%%%%%%%%
+\defaultfont
+\addcontentsline{toc}{chapter}{目~~~~录}
+\tableofcontents
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%%%%%%% 正文部分内容  %%%%%%%%%%
+\mainmatter\defaultfont\sloppy\raggedbottom
+\renewcommand{\ALC@linenosize}{\xiaosi}
+\renewcommand\arraystretch{1.5}
+\setlength{\intextsep}{2pt}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{2pt}
+\include{body/intros}
+\include{body/conclusion}
+
+%%%%%%%%%%  参考文献  %%%%%%%%%%
+\defaultfont
+\bibliographystyle{style}
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+\nocite{*}
+\bibliography{reference}
+\include{appendix/acknowledgements}
+\clearpage
+\end{CJK*}
+\end{document}
