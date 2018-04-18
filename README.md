@@ -34,3 +34,16 @@ dvipdfm.exe "thesis".dvi
 
 :)
 
+## Update :
+
+修改了之前照搬研究生论文的封面
+在`setup\format.tex`267行中修改论文题目
+
+```latex
+\xiaoer\hei{论文题目：} \xiaoer \hei\underline{\makebox[\@title@width][l]{论文标题}} \\
+```
+如果论文题目过长，需要按学校提供的word文档中限制每行的字数，可以将268行的注释去掉，将多余的文字填写在268行中
+
+暂且没找到更优雅的解决方案，如果有更好的解决方案可以直接pull request
+
+其他的封面信息依旧在`preface\cover.tex`中修改
