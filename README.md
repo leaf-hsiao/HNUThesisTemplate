@@ -26,7 +26,7 @@ latex.exe -src -interaction=nonstopmode "thesis".tex
 dvipdfm.exe "thesis".dvi
 ```
 
-### [数学公式速查](http://cateaf.com/2016/08/31/latex-math-symbols-cheetsheet/)
+### [数学公式速查](https://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf)
 
 不保证模板完全的符合要求，请fork后自行按具体要求修改
 
